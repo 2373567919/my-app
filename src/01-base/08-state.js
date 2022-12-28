@@ -1,8 +1,12 @@
 import React, {Component} from 'react';
 
 class App extends Component {
-    state = {
-        isShow: true
+
+    constructor() {
+        super();
+        this.state = {
+            isShow: true
+        }
     }
 
     render() {
@@ -11,9 +15,9 @@ class App extends Component {
                 <h1>欢迎来到react开发</h1>
                 <button onClick={() => {
                     this.setState({
-                        isShow:!this.state.isShow
+                        isShow: !this.state.isShow
                     })
-                }}>{this.state.isShow?'收藏':'取消收藏'}</button>
+                }}>{this.state.isShow ? '收藏' : '取消收藏'}</button>
             </div>
         );
     }
